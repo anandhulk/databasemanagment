@@ -1,0 +1,14 @@
+DELIMITER //
+drop procedure if exists oddoreven //
+CREATE PROCEDURE oddoreven()
+BEGIN
+DECLARE a INT;
+SET a=13;
+IF(a>=0)THEN
+SELECT CONCAT(a,' IS A POSITIVE NUMBER');
+ELSE 
+SELECT CONCAT(a,' IS A NEGETIVE NUMBER');
+END IF;
+END //
+DELIMITER ;
+CALL oddoreven();
